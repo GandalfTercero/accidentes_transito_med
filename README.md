@@ -1,4 +1,7 @@
 # Incidentes viales en Medellín (2008–2025): exploración, predicción y agrupamiento
+> [!IMPORTANT]
+> Proyecto en desarrollo
+
 Proyecto de machine learning con scikit-learn sobre 702.540 incidentes de tránsito registrados en Medellín. Incluye una exploración con mapas de calor, modelos de aprendizaje supervisado (predecir la gravedad de un incidente) y modelos no supervisados (zonas, grupos de comunas y focos de incidentes fatales).
 
 Todos los resultados de este documento salen de ejecutar los scripts de este repositorio.
