@@ -15,9 +15,6 @@ Todos los resultados de este documento salen de ejecutar los scripts de este rep
   * Gravedad: 57,0 % heridos, 42,6 % solo daños, 0,39 % muertos.
   * Datos vacíos: latitud y longitud 6,4 %, comuna 4,0 %, barrio 6,7 %.
 
-El archivo de datos no está incluido en el repositorio por su tamaño. Colócalo en datos/Fatal_Road_Traffic.xlsx.
-
-
 > [!IMPORTANT]
 > El archivo de datos y el caché no está incluido en el repositorio por su tamaño. Colócalo en datos/Fatal_Road_Traffic.xlsx.
 
