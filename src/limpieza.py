@@ -7,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # --- Rutas del proyecto ---
-# __file__ es este archivo (src/common.py). parent = src, parent.parent = raíz del proyecto
+
 RAIZ = Path(__file__).resolve().parent.parent
 RUTA_EXCEL = RAIZ / "datos" / "Fatal_Road_Traffic.xlsx"
 RUTA_PARQUET = RAIZ / "datos" / "incidentes.parquet"   # copia rápida del Excel
