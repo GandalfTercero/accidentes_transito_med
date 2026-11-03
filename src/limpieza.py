@@ -8,13 +8,13 @@ import matplotlib.pyplot as plt
 
 # --- Rutas del proyecto ---
 
-RAIZ = Path(__file__).resolve().parent.parent
-RUTA_EXCEL = RAIZ / "datos" / "Fatal_Road_Traffic.xlsx"
-RUTA_PARQUET = RAIZ / "datos" / "incidentes.parquet"   # copia rápida del Excel
-CARPETA_FIGURAS = RAIZ / "figuras"
+RAIZ = Path(__file__).resolve().parent.parent # Mantener la ruta del proyecto fija
+RUTA_EXCEL = RAIZ / "datos" / "Fatal_Road_Traffic.xlsx" #apunta de forma segura al lugar exacto donde están los datos
+RUTA_PARQUET = RAIZ / "datos" / "incidentes.parquet"   # ruta de la copia de los datos limpios, para no tener que leer el Excel sin procesar
+CARPETA_FIGURAS = RAIZ / "figuras" #Crea la carpeta figuras/ si no existe, para guardar las figuras de los análisis
 CARPETA_FIGURAS.mkdir(exist_ok=True)
 
-SEED = 42   # semilla para que los resultados sean siempre los mismos
+SEED = 42   # Para que los resultados sean siempre los mismos a la hora de ejecutar el código (aleatoriedad controlada)
 DIAS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 
 
@@ -24,7 +24,7 @@ def load_data():
     if RUTA_PARQUET.exists():
         return pd.read_parquet(RUTA_PARQUET)
 
-    print("Leyendo el Excel (solo la primera vez)...")
+    print("Limpiando el excel...")
     df = pd.read_excel(RUTA_EXCEL)
 
     # Cambiar el nombre de algunas columnas
@@ -64,7 +64,7 @@ def load_data():
 
 def savefig(nombre):
     """Guarda la figura actual en la carpeta figuras/ y la cierra."""
-    plt.tight_layout()
+    plt.tight_layout() #corregir automáticamente los márgenes de la figura
     plt.savefig(CARPETA_FIGURAS / (nombre + ".png"), dpi=130)
     plt.close()
     print("  figura guardada: figuras/" + nombre + ".png")
